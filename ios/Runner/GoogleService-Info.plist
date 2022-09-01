@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1095903720062-d7l3c3u6879o02qkovutr2chh4p37ma3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1095903720062-d7l3c3u6879o02qkovutr2chh4p37ma3</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1095903720062-c1utk1efbcsjukgp6jvhev3dk11f43ld.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCTDEcr8eTCzg4SfuO9-v6IFu96w3oQkfw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1095903720062</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.surveiAsia</string>
+	<key>PROJECT_ID</key>
+	<string>surveyasia-mobile-fb-login</string>
+	<key>STORAGE_BUCKET</key>
+	<string>surveyasia-mobile-fb-login.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1095903720062:ios:73a3f968eee878098f5e2f</string>
+</dict>
+</plist>

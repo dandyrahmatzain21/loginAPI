@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SurveyAsia</string>
+    <string name="facebook_app_id">1267631177339845</string>
+    <string name="fb_login_protocol_scheme">fb1267631177339845</string>
+    <string name="facebook_client_token">93e678b293c008a5ee372872d654a8a2</string>
+</resources>
