@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:survei_asia/res/custom_colors.dart';
+import 'package:survei_asia/utils/authentication.dart';
+import 'package:survei_asia/widgets/google_sign_in_button.dart';
 
 class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
+
   @override
-  _LoginScreen createState() => new _LoginScreen();
+  _LoginScreen createState() => _LoginScreen();
 }
 
 class _LoginScreen extends State<LoginScreen> {
@@ -13,9 +18,9 @@ class _LoginScreen extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       body: SafeArea(
-        child: Column (
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Image.asset(
@@ -90,7 +95,63 @@ class _LoginScreen extends State<LoginScreen> {
                   ),
                 ],
               ),
-            )
+            ),
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  Expanded(
+                    child: Divider(
+                      color: Colors.black,
+                      height: 4,
+                      thickness: 1,
+                      indent: 2,
+                      endIndent: 2,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 13),
+                    child: Text(
+                      'Atau masuk menggunakan',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Divider(
+                      color: Colors.black,
+                      height: 4,
+                      thickness: 1,
+                      indent: 2,
+                      endIndent: 2,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                FutureBuilder(
+                  future: Authentication.initializeFirebase(context: context),
+                  builder: (context, snapshot) {
+                    if (snapshot.hasError) {
+                      return Text('Error initializing Firebase');
+                    } else if (snapshot.connectionState == ConnectionState.done) {
+                      return GoogleSignInButton();
+                    }
+                    return CircularProgressIndicator(
+                      valueColor: AlwaysStoppedAnimation<Color>(
+                        CustomColors.diamondOrange,
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
           ],
         ),
       ),
