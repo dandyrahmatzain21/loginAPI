@@ -17,53 +17,53 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
       padding: const EdgeInsets.only(bottom: 16.0),
       child: _isSigningIn
           ? const CircularProgressIndicator(
-        valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
-      )
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
+            )
           : OutlinedButton(
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.white),
-          shape: MaterialStateProperty.all(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(40),
-            ),
-          ),
-        ),
-        onPressed: () async {
-          setState(() {
-            _isSigningIn = true;
-          });
-          User? user =
-          await Authentication.signInWithGoogle(context: context);
-
-          setState(() {
-            _isSigningIn = false;
-          });
-
-          if (user != null) {
-            Navigator.of(context).pushReplacement(
-              MaterialPageRoute(
-                builder: (context) => Dashboard(
-                  // user: user,
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.white),
+                shape: MaterialStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(40),
+                  ),
                 ),
               ),
-            );
-          }
-        },
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const <Widget>[
-              Image(
-                image: AssetImage("images/google.png"),
-                height: 24,
-                width: 24,
+              onPressed: () async {
+                setState(() {
+                  _isSigningIn = true;
+                });
+                User? user =
+                    await Authentication.signInWithGoogle(context: context);
+
+                setState(() {
+                  _isSigningIn = false;
+                });
+
+                if (user != null) {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) => Dashboard(
+                          // user: user,
+                          ),
+                    ),
+                  );
+                }
+              },
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const <Widget>[
+                    Image(
+                      image: AssetImage("images/google.png"),
+                      height: 24,
+                      width: 24,
+                    ),
+                  ],
+                ),
               ),
-            ],
-          ),
-        ),
-      ),
+            ),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:survei_asia/res/custom_colors.dart';
 import 'package:survei_asia/utils/authentication.dart';
+import 'package:survei_asia/widgets/facebook_sign_in_button.dart';
 import 'package:survei_asia/widgets/google_sign_in_button.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -20,9 +21,8 @@ class _LoginScreen extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
+        child: ListView(
+          children: [
             Image.asset(
               "images/image1.png",
               width: 200,
@@ -133,7 +133,7 @@ class _LoginScreen extends State<LoginScreen> {
               ),
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 FutureBuilder(
                   future: Authentication.initializeFirebase(context: context),
@@ -150,11 +150,12 @@ class _LoginScreen extends State<LoginScreen> {
                     );
                   },
                 ),
+                FacebookSignInButton()
               ],
             ),
-          ],
+          ]
         ),
-      ),
-    );
+        ));
+
   }
 }

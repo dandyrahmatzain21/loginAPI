@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1095903720062-s8dmj2f459qug673mn5p5q04u2r3csjl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.survei_asia",
+            "certificate_hash": "4a209efc65f0e525e932d74392165bacbdab0485"
+          }
+        },
+        {
           "client_id": "1095903720062-t1vugtab77g952onrocfo9gb23iu9q67.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -31,10 +39,10 @@
               "client_type": 3
             },
             {
-              "client_id": "1095903720062-nj869b9q0tfl3il6jvgpebqvtgjabm5t.apps.googleusercontent.com",
+              "client_id": "1095903720062-d7l3c3u6879o02qkovutr2chh4p37ma3.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "id.citiasiainc.surveyasia"
+                "bundle_id": "com.example.surveiAsia"
               }
             }
           ]
@@ -83,10 +91,10 @@
               "client_type": 3
             },
             {
-              "client_id": "1095903720062-nj869b9q0tfl3il6jvgpebqvtgjabm5t.apps.googleusercontent.com",
+              "client_id": "1095903720062-d7l3c3u6879o02qkovutr2chh4p37ma3.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "id.citiasiainc.surveyasia"
+                "bundle_id": "com.example.surveiAsia"
               }
             }
           ]
