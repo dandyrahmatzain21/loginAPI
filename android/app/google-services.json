@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "1095903720062",
+    "project_id": "surveyasia-mobile-fb-login",
+    "storage_bucket": "surveyasia-mobile-fb-login.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095903720062:android:8ddeeeb97c90a1758f5e2f",
+        "android_client_info": {
+          "package_name": "com.example.survei_asia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1095903720062-t1vugtab77g952onrocfo9gb23iu9q67.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqERhmpRUZrVVtrXwWiy0ljTjLQuBVL1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1095903720062-t1vugtab77g952onrocfo9gb23iu9q67.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1095903720062-nj869b9q0tfl3il6jvgpebqvtgjabm5t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "id.citiasiainc.surveyasia"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095903720062:android:bdd14ea6629be3a28f5e2f",
+        "android_client_info": {
+          "package_name": "id.citiasiainc.surveyasia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1095903720062-c1utk1efbcsjukgp6jvhev3dk11f43ld.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.citiasiainc.surveyasia",
+            "certificate_hash": "4c6da62dc248c81c07ccb0b5de4f84fdba393a9d"
+          }
+        },
+        {
+          "client_id": "1095903720062-hur7m0p8p1k236arnnv0vf6qn099l21q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.citiasiainc.surveyasia",
+            "certificate_hash": "9922eb4687ca1f582a70a135e5cdb4457546f099"
+          }
+        },
+        {
+          "client_id": "1095903720062-t1vugtab77g952onrocfo9gb23iu9q67.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqERhmpRUZrVVtrXwWiy0ljTjLQuBVL1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1095903720062-t1vugtab77g952onrocfo9gb23iu9q67.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1095903720062-nj869b9q0tfl3il6jvgpebqvtgjabm5t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "id.citiasiainc.surveyasia"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
