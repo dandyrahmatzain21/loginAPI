@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:survei_asia/services/shared_service.dart';
 import 'dart:async';
 import './landing.dart';
+import 'dashboard.dart';
+import 'models/login_response.dart';
 
 class LauncherPage extends StatefulWidget {
   @override
@@ -17,11 +20,28 @@ class _LauncherPageState extends State<LauncherPage> {
   startLaunching() async {
     var duration = const Duration(seconds: 5);
     return new Timer(duration, () {
-      Navigator.of(context).pushReplacement(new MaterialPageRoute(builder: (_) {
-        return new LandingPage() ;
-      }));
+      checkLogin();
     });
   }
+
+  void checkLogin() async {
+    WidgetsFlutterBinding.ensureInitialized();
+    bool _isLoggedIn = await SharedService.isLoggedIn();
+    LoginResponse? data = await SharedService.loginDetails();
+    if (_isLoggedIn) {
+      print("Token LoggedIn : ${data?.data?.Token}");
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => Dashboard()),
+              (route) => false);
+    } else {
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => LandingPage()),
+              (route) => false);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(

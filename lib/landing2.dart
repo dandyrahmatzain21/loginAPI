@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import './dashboard.dart';
 import 'login.dart';
@@ -13,7 +12,7 @@ class _LandingPageState2 extends State<LandingPage2> {
   @override
   void initState() {
     super.initState();
-    startLaunching();
+    // startLaunching();
   }
   startLaunching() async {
     var duration = const Duration(seconds: 5);

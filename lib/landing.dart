@@ -1,7 +1,7 @@
-import 'dart:async';
-import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
-import './landing2.dart';
+import 'package:survei_asia/models/login_response.dart';
+import 'package:survei_asia/services/shared_service.dart';
+import 'dashboard.dart';
 import 'login.dart';
 
 class LandingPage extends StatefulWidget {
@@ -13,15 +13,20 @@ class _LandingPageState extends State<LandingPage> {
   @override
   void initState() {
     super.initState();
-    startLaunching();
+    // checkLogin();
   }
-  startLaunching() async {
-    var duration = const Duration(seconds: 5);
-    return new Timer(duration, () {
-      Navigator.of(context).pushReplacement(new MaterialPageRoute(builder: (_) {
-        return new LandingPage2() ;
-      }));
-    });
+
+  checkLogin() async {
+    WidgetsFlutterBinding.ensureInitialized();
+    bool _isLoggedIn = await SharedService.isLoggedIn();
+    LoginResponse? data = await SharedService.loginDetails();
+    if (_isLoggedIn) {
+      print("Token LoggedIn : ${data?.data?.Token}");
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => Dashboard()),
+              (route) => false);
+    }
   }
 
   @override

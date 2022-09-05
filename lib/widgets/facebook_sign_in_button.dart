@@ -54,7 +54,7 @@ class _FacebookSignInButton extends State<FacebookSignInButton> {
         .login(permissions: ['email', 'public_profile', 'user_birthday']);
 
     final OAuthCredential credential =
-        FacebookAuthProvider.credential(loginResult!.accessToken!.token);
+        FacebookAuthProvider.credential(loginResult.accessToken!.token);
 
     final userData = await FacebookAuth.instance.getUserData();
 
